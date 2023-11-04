@@ -1,5 +1,8 @@
 package com.example.record_system.entity;
 
+import javax.persistence.Entity;
+
+@Entity
 public class GymSet {
     // 健身 今天練啥 練了哪些動作 這些動組的組數
 
