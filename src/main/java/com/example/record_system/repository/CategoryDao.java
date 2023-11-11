@@ -23,6 +23,6 @@ public interface CategoryDao extends JpaRepository<Category,Integer> {
             @Param("userId")String userId,
             @Param("ctgFor")String ctgFor,
             @Param("name")String name);
-
-    public List<Category> findAllByUserId(String userId);
+// (select )
+    public List<Category> findAllByUserIdAndCtgFor(String userId , String ctgFor);
 }

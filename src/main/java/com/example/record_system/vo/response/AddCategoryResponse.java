@@ -43,4 +43,12 @@ public class AddCategoryResponse {
     public void setCategory(Category category) {
         this.category = category;
     }
+
+    public List<Category> getCategoryList() {
+        return categoryList;
+    }
+
+    public void setCategoryList(List<Category> categoryList) {
+        this.categoryList = categoryList;
+    }
 }

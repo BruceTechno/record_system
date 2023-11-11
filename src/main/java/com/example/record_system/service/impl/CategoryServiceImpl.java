@@ -34,10 +34,10 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public AddCategoryResponse getCtgByUser(AddCategoryRequest request) {
+    public AddCategoryResponse getCtgByUserAndCtgFor(AddCategoryRequest request) {
         String userId = request.getUserId();
-        List<Category> result = categoryDao.findAllByUserId(userId);
-
+        String ctgFor = request.getCtgFor();
+        List<Category> result = categoryDao.findAllByUserIdAndCtgFor(userId,ctgFor);
         return new AddCategoryResponse(RtnCode.SUCCESSFUL.getMessage(),result);
     }
 }
