@@ -6,11 +6,11 @@ import java.time.LocalDate;
 public class AddAccountingRequest {
 
     private String userId;    //暫時寫死 bruce
-    private LocalDate date;
+    private String date;
     private Integer categoryId;
     private Integer cost;
     private String thing;
-    private boolean isRequire;
+    private String ynRequire;
     private Integer incomeOrOutcome; //是收入還是支出
 //==
 
@@ -26,11 +26,11 @@ public class AddAccountingRequest {
         this.userId = userId;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -66,11 +66,11 @@ public class AddAccountingRequest {
         this.thing = thing;
     }
 
-    public boolean isRequire() {
-        return isRequire;
+    public String getYnRequire() {
+        return ynRequire;
     }
 
-    public void setRequire(boolean require) {
-        isRequire = require;
+    public void setYnRequire(String ynRequire) {
+        this.ynRequire = ynRequire;
     }
 }

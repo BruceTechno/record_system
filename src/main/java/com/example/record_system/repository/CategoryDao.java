@@ -16,9 +16,9 @@ public interface CategoryDao extends JpaRepository<Category,Integer> {
 
     @Transactional
     @Modifying
-    @Query(value = "insert into category(USER_ID,CATEGORY_FOR,NAME)" +
+    @Query(value = "insert into category(USER_ID,CTG_FOR,CTG_NAM)" +
             " select :userId,:ctgFor,:name" +
-            " where not exists (select 1 from category where USER_ID = :userId and CATEGORY_FOR = :ctgFor and NAME = :name)" ,nativeQuery = true)
+            " where not exists (select 1 from category where USER_ID = :userId and CTG_FOR = :ctgFor and CTG_NAM = :name)" ,nativeQuery = true)
     public int insertCategoryWhereNotExists(
             @Param("userId")String userId,
             @Param("ctgFor")String ctgFor,

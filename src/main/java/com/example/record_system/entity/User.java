@@ -25,7 +25,14 @@ public class User {
 
     public User() {
     }
-//==
+
+    public User(String account, String pwd, String name, String mail) {
+        this.account = account;
+        this.pwd = pwd;
+        this.name = name;
+        this.mail = mail;
+    }
+    //==
 
     public Integer getId() {
         return id;

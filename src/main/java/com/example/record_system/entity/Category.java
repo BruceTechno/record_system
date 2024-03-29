@@ -16,9 +16,9 @@ public class Category {
     private Integer id;
     @Column(name = "USER_ID")
     private String userId;
-    @Column(name = "CATEGORY_FOR")
+    @Column(name = "CTG_FOR")
     private String ctgFor;
-    @Column(name = "NAME")
+    @Column(name = "CTG_NAM")
     private String name;
 //==
     public Category() {

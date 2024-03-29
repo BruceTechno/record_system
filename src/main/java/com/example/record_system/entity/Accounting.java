@@ -1,6 +1,7 @@
 package com.example.record_system.entity;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
 @Entity
@@ -23,9 +24,9 @@ public class  Accounting {
     @Column(name = "COST")
     private Integer cost;
     @Column(name = "DATE")
-    private LocalDate date = LocalDate.now();
-    @Column(name = "IS_REQUIRE")
-    private boolean isRequire;
+    private String date ;
+    @Column(name = "YNREQUIRE")
+    private String ynRequire;
     @Column(name = "IN_OUTCOME")
     private Integer incomeOrOutcome; //是收入還是支出
 //==
@@ -33,13 +34,13 @@ public class  Accounting {
     public Accounting() {
     }
 
-    public Accounting(String userId, Integer categoryId, String thing, Integer cost, LocalDate date, boolean isRequire, Integer incomeOrOutcome) {
+    public Accounting(String userId, Integer categoryId, String thing, Integer cost, String date, String ynRequire, Integer incomeOrOutcome) {
         this.userId = userId;
         this.categoryId = categoryId;
         this.thing = thing;
         this.cost = cost;
         this.date = date;
-        this.isRequire = isRequire;
+        this.ynRequire = ynRequire;
         this.incomeOrOutcome = incomeOrOutcome;
     }
 //==
@@ -84,20 +85,20 @@ public class  Accounting {
         this.cost = cost;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public boolean isRequire() {
-        return isRequire;
+    public String getYnRequire() {
+        return ynRequire;
     }
 
-    public void setRequire(boolean require) {
-        isRequire = require;
+    public void setYnRequire(String ynRequire) {
+        this.ynRequire = ynRequire;
     }
 
     public Integer getIncomeOrOutcome() {
